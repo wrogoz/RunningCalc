@@ -14,3 +14,5 @@ var szacowanyCzasWsek=szacowanyCzasWmin*60;
 }
 
 
+
+
