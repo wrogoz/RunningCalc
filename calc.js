@@ -1,10 +1,12 @@
-var godz=$("#godziny").val();
-var szacowanyCzasWmin=$("#minuty").val();
-var sekundy=$("#sekundy").val();
-var km=$("#km").val();
+
 
 
 $("#przelicz").on("click", function (){
+
+var godz=parseInt($("#godziny").val() ,10);
+var szacowanyCzasWmin=parseInt($("#minuty").val(), 10);
+var sekundy=parseInt($("#sekundy").val(), 10);
+var km=parseInt($("#km").val(), 10);
 
 var wynik=function sugerowaneTempo (godz, szacowanyCzasWmin,sekundy, km){
 
