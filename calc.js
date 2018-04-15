@@ -3,15 +3,19 @@
 
 $("#przelicz").on("click", function (){
 
-var godz=parseInt($("#godziny").val() ,10);
-var szacowanyCzasWmin=parseInt($("#minuty").val(), 10);
-var sekundy=parseInt($("#sekundy").val(), 10);
-var km=parseInt($("#km").val(), 10);
+	var godz=parseInt($("#godziny").val());
+	var szacowanyCzasWmin=parseInt($("#minuty").val());
+	var sekundy=parseInt($("#sekundy").val());
+	var km=parseInt($("#km").val());
 
-var wynik=function sugerowaneTempo (godz, szacowanyCzasWmin,sekundy, km){
+$("#wynik").text(sugerowaneTempo(godz, szacowanyCzasWmin,sekundy, km))
+});
 
 
-	
+
+
+
+function sugerowaneTempo (godz, szacowanyCzasWmin,sekundy, km){
 
 	//				 min/km jako int
 	var szacowanyCzasWsek=szacowanyCzasWmin*60;
@@ -27,15 +31,11 @@ var wynik=function sugerowaneTempo (godz, szacowanyCzasWmin,sekundy, km){
 	    	return min + ":" + sek;
 		}
 	 	else{
-	 		return min + ":" + sek.toFixed(0) ;
-	 		}
+	 		return min + ":" + sek.toFixed(0)
+	 	}
+	 }
+	 		
 		
-}; 	
-
-
-$("#wynik").text(wynik);
-
-});
 
 
 
@@ -48,15 +48,14 @@ $("#wynik").text(wynik);
 
 
 
-
-//		------------------->funkcje<-------------------------
+//	------------------->funkcje<-------------------------
 
 
 // dane do wprowadzenia czas / odległosc
 //czas sprowadzic do wspolnego mianownika
 
+/*
 
-/* 
 function sugerowaneTempo ( szacowanyCzasWmin, km){
 	//				 min/km jako int
 	var szacowanyCzasWsek=szacowanyCzasWmin*60;
