@@ -8,7 +8,7 @@ $("#przelicz").on("click", function (){
 	var sekundy=parseInt($("#sekundy").val());
 	var km=parseInt($("#km").val());
 
-$("#wynik").text(sugerowaneTempo(godz, szacowanyCzasWmin,sekundy, km))
+$("#score").text(sugerowaneTempo(godz, szacowanyCzasWmin,sekundy, km))
 });
 
 
