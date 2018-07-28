@@ -26,9 +26,9 @@ function sugerowaneTempo (godz, szacowanyCzasWmin,sekundy, km){
 	 //				reszta sekund
 	 var sek= (szacowanyCzasWsek/km)%60;
 	 // 			zwróć: tempo
-		if (sek.toString().length === 1) {					
+		if (sek.toString()[0] == '0') {					
 	    	sek = '0' + sek;
-	    	return min + ":" + sek;
+	    	return min + ":" + sek.slice(0,2);
 		}
 	 	else{
 	 		return min + ":" + sek.toFixed(0)
